@@ -20,7 +20,8 @@ public class CustomJwtGrantedAuthoritiesConverter implements Converter<Jwt, Coll
         Collection<GrantedAuthority> updatedGrantedAuthorities = new ArrayList<>(grantedAuthorities);
         if (Admin.members.contains((String)jwt.getClaims().get("email"))) {
             updatedGrantedAuthorities.add(new SimpleGrantedAuthority(ROLE_ADMIN.name()));
-        } else updatedGrantedAuthorities.add(new SimpleGrantedAuthority(ROLE_USER.name()));
+        }
+        updatedGrantedAuthorities.add(new SimpleGrantedAuthority(ROLE_USER.name()));
         return updatedGrantedAuthorities;
     }
 }
