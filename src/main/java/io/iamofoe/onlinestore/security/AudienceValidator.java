@@ -1,13 +1,12 @@
 package io.iamofoe.onlinestore.security;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.oauth2.core.OAuth2Error;
 import org.springframework.security.oauth2.core.OAuth2TokenValidator;
 import org.springframework.security.oauth2.core.OAuth2TokenValidatorResult;
 import org.springframework.security.oauth2.jwt.Jwt;
 
-@Slf4j
+
 @RequiredArgsConstructor
 public class AudienceValidator implements OAuth2TokenValidator<Jwt> {
     private final String audience;
