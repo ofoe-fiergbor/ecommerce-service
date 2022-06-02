@@ -5,6 +5,9 @@ import lombok.Value;
 
 @Value
 @Builder
-public class AdminRequest {
+public class UserSignUpDto {
+    String firstName;
+    String lastName;
     String email;
+    String password;
 }

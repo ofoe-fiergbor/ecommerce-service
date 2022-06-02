@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Test {
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String hello() {
         System.err.println(SecurityContextHolder.getContext());
         return "Hello, !";
